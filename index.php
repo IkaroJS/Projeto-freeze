@@ -61,7 +61,7 @@ and open the template in the editor.
                     <div>
                         <ul>
                             <li>
-                                <a href="#" class="product"></a>
+                                <a href="produto_buscar.php" class="product"></a>
                                 <h1>PRODUTOS</h1>
                             </li>
                             <li>
