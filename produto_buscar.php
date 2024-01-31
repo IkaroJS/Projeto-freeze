@@ -36,15 +36,32 @@ and open the template in the editor.
 
         <!-- CABEÇALHO -->
         <?php include 'header_admin.php' ?>
+        <?php include 'conexao_bd.php' ?>
 
         <div id="body" class="contact">
             <div class="footer">
                 <div class="contact">
                     <h1>MOSTRAR PRODUTOS</h1>
-                </div>
+                    <?php 
+                    $sql = "SELECT * FROM produto ORDER BY descricao";
+                    $resultado = retornarDados($sql);
+                    ?>
 
+                        <?php while ($linha = mysqli_fetch_assoc($resultado))
+                        {
+                            $descricao = $linha["descricao"];
+                        
+                        ?>            
+                    <table>
+                        <tr>
+                            <td><h2><?php echo $descricao; ?></h2></td>
+                        </tr>
+                    </table>
+                    <?php } ?>
+                </div>
             </div>
         </div>
+        
         <!-- RODAPÉ -->
         <?php include 'footer_admin.php' ?>
     </body>
