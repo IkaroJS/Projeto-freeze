@@ -37,21 +37,25 @@ and open the template in the editor.
         <!-- CABEÇALHO -->
         <?php include 'header_admin.php' ?>
 
-        <div id="body" class="contact">
-            <div class="footer">
-                <div class="contact">
-                       <h1>CADASTRAR PRODUTO</h1>
+        <form action="produto_cadastro_salvar.php" method="post">
+            <div id="body" class="contact">
+                <div class="footer">
+                    <div class="contact">
+                        <h1>CADASTRAR PRODUTO</h1>
+                        
+            <ol>
+                
+                <li>
+                    <input type="text" name="txtDescricao" class="textbox" placeholder="Descrição do produto"/>
+                </li>
 
-               <ol>
-                    <li>
-                        <input type="text" name="txtDescricao" class="textbox" placeholder="Descrição do produto"/></li>
-
-                    <li>
-                        <input type="submit" name="btSalvar"  value="Enviar" class="botao" />
-                    </li>
+                <li>
+                    <input type="submit" name="btSalvar" value="Enviar" class="botao" />
+                </li>
 
                   
-                </ol>
+            </ol>
+        </form>
 
                 </div>
             </div>
