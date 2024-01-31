@@ -4,14 +4,14 @@
             <img src="images/logo.png" alt="" /></a>
         <ul id="navigation">
             <li class="selected">
-                <a href="#">Home</a>
+                <a href="index.php">Home</a>
             </li>
             <li class="menu">
                 <a href="#">A empresa</a>
 
             </li>
             <li class="menu">
-                <a href="#">Produtos</a>
+                <a href="produto_buscar.php">Produtos</a>
 
             </li>
             <li class="menu">
