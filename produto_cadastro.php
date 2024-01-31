@@ -33,34 +33,33 @@ and open the template in the editor.
         <script src="js_bootstrap/bootstrap.min.js"></script>
     </head>
     <body>
+        <form action="produto_cadastro_salvar.php" method="post">
+
 
         <!-- CABEÇALHO -->
         <?php include 'header_admin.php' ?>
 
-        <form action="produto_cadastro_salvar.php" method="post">
-            <div id="body" class="contact">
-                <div class="footer">
-                    <div class="contact">
-                        <h1>CADASTRAR PRODUTO</h1>
-                        
-            <ol>
-                
-                <li>
-                    <input type="text" name="txtDescricao" class="textbox" placeholder="Descrição do produto"/>
-                </li>
+        <div id="body" class="contact">
+            <div class="footer">
+                <div class="contact">
+                       <h1>CADASTRAR PRODUTO</h1>
 
-                <li>
-                    <input type="submit" name="btSalvar" value="Enviar" class="botao" />
-                </li>
+               <ol>
+                    <li>
+                        <input type="text" name="txtDescricao" class="textbox" placeholder="Descrição do produto"/></li>
+
+                    <li>
+                        <input type="submit" name="btSalvar"  value="Enviar" class="botao" />
+                    </li>
 
                   
-            </ol>
-        </form>
+                </ol>
 
                 </div>
             </div>
         </div>
         <!-- RODAPÉ -->
         <?php include 'footer_admin.php' ?>
+</form>
     </body>
 </html>

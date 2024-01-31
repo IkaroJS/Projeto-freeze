@@ -11,7 +11,7 @@
 
             </li>
             <li class="menu">
-                <a href="produto_buscar.php">Produtos</a>
+                <a href="#">Produtos</a>
 
             </li>
             <li class="menu">

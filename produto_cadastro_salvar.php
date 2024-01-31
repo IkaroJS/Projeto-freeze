@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Frozen Sorvetes</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
         <link rel="stylesheet" href="css/estiloformularios.css" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/mobile.css" />
         <script src="js/mobile.js" type="text/javascript"></script>
@@ -31,21 +26,34 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
         <script src="js_bootstrap/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <?php include 'conexao_bd.php' ?>
+</head>
+<body>
+    <?php
 
-        <!-- CABEÇALHO -->
-        <?php include 'header_admin.php' ?>
+    include 'header_admin.php';
+    include 'conexao_bd.php';
 
-        <?php 
-            $descricao = $_POST["txtDescricao"];
+    //1º - Capturar as entradas de dados
+    $descricao = $_POST["txtDescricao"];
 
-            $sql = "INSERT INTO produto(descricao) VALUE('$descricao')"
-        
-        ?>
-            
-        <!-- RODAPÉ -->
-        <?php include 'footer_admin.php' ?>
-    </body>
+    //2º- Codificar o SQL para INSERIR
+    $sql = "INSERT INTO produto(descricao) values ('$descricao')";
+
+    //3º - EXECUTAR O COMANDO SQL
+
+    if (executarComando($sql)){
+        echo "<h2 class='alert alert-sucess'>O produto foi inserido na base de dados!</h2>";       
+    }
+    else
+    {
+        echo "<h2 class='alert alert-danger'>Erro durante a inserção</h2>";
+    }
+
+    ?>
+
+    <a href="produto_cadastro.php"/>
+        <input type="button" value="Voltar" class="botao" />
+    </a>
+
+</body>
 </html>
